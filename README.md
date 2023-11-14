@@ -6,15 +6,15 @@
 - Learn how to make a console app wait for certain input before exiting a loop.
 
 ## Instructions
-1. Clone this repo. Ensure that you have a blank `main.py`.
+1. Clone this repo. Ensure that you have a `main.py` that contains an empty `main()`.
 1. Add the entrypoint for running your `main.py` by adding the following to the bottom of the file: 
     ```py
     if __name__ == "__main__":
         main()
     ```
-1. Add a class to your project called `Product`. You can add it directly into the `main.py` file if you want to. This class will be what's called a _base_ class or a _parent_ class.  This will be the most basic class that all product classes will inherit from. Ref: [Python docs on classes](https://docs.python.org/3/tutorial/classes.html#a-first-look-at-classes)
+1. Add a class to your project called `Product`. You can add it directly into the `main.py` file if you want to; remember it needs to be outside of `main()`. This class will be what's called a _base_ class or a _parent_ class.  This will be the most basic class that all product classes will inherit from. Ref: [Python docs on classes](https://docs.python.org/3/tutorial/classes.html#a-first-look-at-classes)
 1. Add a constructor to your `Product` class by creating a method inside called `__init__` by doing: `def __init__(self):`.
-    * Note: Remember that `self` must be the first parameter for your constructor.
+    * Note: Remember that `self` must be the first parameter for your constructor. This allows the single instance to reference it's own variables and methods, i.e. "When one cat meows, not all cats meow."
 1. Add the following parameters to your `__init__()` constructor:
    - name - Type `str`
    - price - Type `float`
@@ -42,7 +42,7 @@
    - KittenFood- Type `bool`
 1. Make another class called `DogLeash` and have it inherit from `Product` as well. Give it a the following _Properties_ 
    - LengthInches - Type `int`
-   - Material - Type `string`
+   - Material - Type `str`
 
 ### Looping
 Now we want to get this app to run until the user decides to end it.  We will do this by using a `while` loop.  Loops require 3 things: an inital condition, check in condition, and a change in condition.  Our inital condition is going to be our first input from the user.  Our check is what is in the while loop.  Our change is going to be what the user inputs after an action has been complete.  So, let's get started with the initial condition.
